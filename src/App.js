@@ -17,15 +17,15 @@ function App() {
         <div className="container">
           <h1 id="heading">Tic Tac Toe</h1>
           <div className=" row " id={"a1"} >
-            <div className="col-4" >
+            <div className="col-lg-4 col-sm-12 mt-1" >
               <label> player 1 (o) Name </label>
               <input id="p1_value"  />
             </div>
-            <div className="col-4"  >
+            <div className="col-lg-4 col-sm-12 mt-1" >
               <label> player 2 (x) Name </label>
               <input id="p2_value" />
             </div >
-            <div className="col-4"  >
+            <div className="col-lg-4 col-sm-8 mt-1"  >
               <button type={"button"} className="btn btn-primary " onClickCapture={read}>submit</button>
             </div>
           </div>
@@ -110,9 +110,9 @@ function read() {
 
 }
 function play(target){
-  if(s==1) {
-    if (a % 2 == 0) {
-      if (target.currentTarget.innerHTML == "") {
+  if(s===1) {
+    if (a % 2 === 0) {
+      if (target.currentTarget.innerHTML === "") {
         document.getElementById("bt1").style.display="inline-block";
         document.getElementById("bt2").style.display="none";
         console.log("h1" + target.currentTarget.innerHTML);
@@ -124,7 +124,7 @@ function play(target){
       }
     } else {
 
-      if (target.currentTarget.innerHTML == "") {
+      if (target.currentTarget.innerHTML === "") {
         document.getElementById("bt2").style.display="inline-block";
         document.getElementById("bt1").style.display="none";
         console.log("h2" + target.currentTarget.innerHTML);
@@ -143,7 +143,7 @@ function win_check(){
 
   console.log("checking 1"+ a1);
 
-  if( a1.innerHTML!="" & a2.innerHTML!="" & a3.innerHTML!=""){
+  if( a1.innerHTML!="" & a2.innerHTML!=="" & a3.innerHTML!=""){
     console.log("checking a1");
     if( a1.firstElementChild.src === a2.firstElementChild.src & a3.firstElementChild.src === a2.firstElementChild.src) {
       console.log("1");
