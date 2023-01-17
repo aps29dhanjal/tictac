@@ -41,6 +41,9 @@ function App() {
           </div>
           <div className="result">
             <h1 id ="result"> </h1>
+            <button type="button"  className="btn btn-primary" id="pr" onClick={() => window.location.reload(true)} >
+               New Game
+               </button>
           </div>
           <div className="box" id={"a2"}>
             <div className="row">
@@ -248,6 +251,7 @@ function win_check(){
     console.log("p1");
     document.getElementById("result").innerText = player1 + " : is winner";
     document.getElementById("result").style.display = "block";
+    document.getElementById("pr").style.display = "block";
     s=0;
     document.getElementById("bt1").style.display="none";
     document.getElementById("bt2").style.display="none";
@@ -256,6 +260,7 @@ function win_check(){
     console.log("p2");
     document.getElementById("result").innerText = player2 + " : is winner";
     document.getElementById("result").style.display = "block";
+    document.getElementById("pr").style.display = "block";
     s=0;
     document.getElementById("bt1").style.display="none";
     document.getElementById("bt2").style.display="none";
@@ -264,6 +269,7 @@ function win_check(){
 
     document.getElementById("result").innerText = "Match Draw";
     document.getElementById("result").style.display = "block";
+    document.getElementById("pr").style.display = "block";
     document.getElementById("bt1").style.display="none";
     document.getElementById("bt2").style.display="none";
   }
